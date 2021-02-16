@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;800;900&display=swap);
+:root {
+    --red: rgb(237, 102, 99);
+    --green: rgb(3, 196, 161);
+    --blue: rgb(26, 166, 183);
+    --yellow: rgb(255, 200, 92);
+    --latte: rgb(248, 241, 241);
+    --purple: rgb(112, 34, 131);
+    --lightGrey: rgb(216, 212, 200);
+    --grey: rgb(136, 133, 125);
+    --darkGrey: rgb(29, 29, 22);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+
+    --transparentRed: rgba(237, 102, 99, 0.3);
+    --transparentGreen: rgba(3, 196, 161, 0.3);
+    --transparentBlue: rgba(26, 166, 183, 0.3);
+    --transparentYellow: rgba(255, 200, 92, 0.3);
+    --transparentGrey: rgba(216, 212, 200, 0.3);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body, 
+input, 
+textarea, 
+button {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    background-color: var(--latte);
+    color: rgb(22, 22, 29)
+}
+
+/* Container. */
+
+.container {
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+/* Forme. */
+
+input, 
+select, 
+textarea {
+    background-color: var(--white);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--grey);
+    border-radius: 5px;
+    outline: 0px;
+    padding: 10px;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    box-shadow: var(--transparentGrey) 0px 0px 0px 3px;
+}
+
+button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 20px;
+    background-color: var(--grey);
+    font-weight: bold;
+    color: var(--white);
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.buttonRed {
+    background-color: var(--red);
+}
+
+.buttonGreen {
+    background-color: var(--green);
+}
+
+.buttonGreen:focus {
+    box-shadow: var(--transparentGreen) 0px 0px 0px 3px;
+}
+
+.buttonBlue {
+    background-color: var(--blue);
+}
+
+.buttonBlue:focus {
+    box-shadow: var(--transparentBlue) 0px 0px 0px 3px;
+}
+
+.buttonYellow {
+    background-color: var(--yellow);
+}
+
+.buttonYellow:focus {
+    box-shadow: var(--transparentYellow) 0px 0px 0px 3px;
+}
+
+.errorText {
+    color: var(--red);
+}
+
+.descriptionText {
+    color: var(--grey);
+}
+
+/* Poveznice. */
+
+a:link, 
+a:visited {
+    text-decoration: none;
+    color: black;
+    transition: all .2s ease-in-out;
+}
+
+a:hover {
+    color: var(--purple);
+}
+
+/* Forme */
+
+label {
+    margin-top: 15px;
+}
+
+input, textarea {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*# sourceMappingURL=styles.css.map*/
