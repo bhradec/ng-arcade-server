@@ -48,7 +48,7 @@ CREATE USER 'username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pas
 ```
 U slučaju da korisnik već postoji:
 ```
-CREATE USER 'username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 
 Nakon stvaranja korisnika, izvršiti SQL skriptu iz `database` direktorija na stvorenom
