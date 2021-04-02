@@ -38,8 +38,18 @@ taj autor napravio.
 Isto tako postoji i profil svakog korisnika na kojemu se nalaze podatci o korisniku i
 popis igara koje je korisnik prethodno igrao.
 
-Lijep pozdrav,
+## Stvaranje korisnika (MySQL)
 
-Bruno Hradec,
-redovni preddiplomski stručni studij računarstva,
-Tehničko veleučilište u Zagrebu
+Ako na operacijskom sustavu GNU/Linux postoji potreba za staranjem novog korisnika u 
+MySQL bazi, kako bi se izbjegli problemi u autentifikaciji korisnika potrebno je 
+izvrsiti sljedece naredbe:
+```
+CREATE USER 'username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+U slučaju da korisnik već postoji:
+```
+CREATE USER 'username'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+
+Nakon stvaranja korisnika, izvršiti SQL skriptu iz `database` direktorija na stvorenom
+korisniku.

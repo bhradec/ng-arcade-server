@@ -3,9 +3,10 @@ module.exports = {
     connectionPoolData: {
         connectionLimit: 100,
         host: "localhost",
-        user: "root",
-        password: "",
+        user: "username",
+        password: "password",
         database: "ngarcade",
+        insecureAuth: true
     },
     uploadPath: "./public/uploads/"
 };
