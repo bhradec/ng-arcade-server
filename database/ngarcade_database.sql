@@ -9,7 +9,7 @@ CREATE TABLE users (
     username VARCHAR (50) NOT NULL,
     email VARCHAR (255) NOT NULL,
     password VARCHAR (512) NOT NULL,
-    -- Level 1 - USER, level 2 - MOD.
+    # Level 1 - USER, level 2 - MOD.
     level TINYINT NOT NULL,
     
     PRIMARY KEY (id)
@@ -51,7 +51,7 @@ CREATE TABLE comments (
 );
 
 DROP TABLE IF EXISTS gamesUsers;
--- Keeps track of which users play what games.
+# Keeps track of which users play what games.
 CREATE TABLE gamesUsers (
 	id INT AUTO_INCREMENT NOT NULL,
 	userId INT NOT NULL,
@@ -61,13 +61,13 @@ CREATE TABLE gamesUsers (
     PRIMARY KEY (id, userId, gameId)
 );
 
--- UNOS PODATAKA:
+# UNOS PODATAKA:
 
 INSERT INTO users (id, username, email, password, level) 
 	VALUES (1,'mirko80','mirko@gmail.com','ee82001a6fe74c6a9981e14bcb4891141996b81050d43fbf0ea16ed7a4cb78edd0f66c692619a5fcb460130a8b566d89d8d140d6a215a81aaf327b8b5742c9bc',1),
 		(2,'ivica','ivica@gmail.com','9108e1f391b9a9b0cd3ac9c4034aff2c67d14755741308355005dbb6515c6dc87dc9737fe5a832b15dae04c8d91d0b65746c5183407d1e96b12f21f1506595ea',2);
         
-INSERT INTO gameauthors (id, name) 
+INSERT INTO gameAuthors (id, name) 
 	VALUES (4, 'gabrielecirulli'),
 		(5, 'BKcore'),
         (7, 'mimshwright'),
@@ -100,7 +100,7 @@ INSERT INTO comments(id, comment, timestamp, userId, gameId)
         (11,'Pre teško...','2021-02-14 22:28:43',2,11),
         (12,'Nije uopće teško!','2021-02-14 22:32:56',1,11);
         
-INSERT INTO gamesusers(id, userId, gameId, timestamp) 
+INSERT INTO gamesUsers(id, userId, gameId, timestamp) 
 	VALUES (1,1,4,'2021-02-14 21:49:41'),
 		(2,1,4,'2021-02-14 21:49:44'),
         (3,1,5,'2021-02-14 21:49:51'),
